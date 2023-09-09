@@ -15,14 +15,15 @@ if (!isset($_SESSION["user"])) {
     <link rel= "stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+<h2>Kroll Villa Reservations</h2>
     <div class="container">
         <form action="login.php" method="post">
             <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Enter E-mail">
+                <input type="email" class="form-control" name="email" placeholder="Email Address">
             </div>
 
             <div class="form-group">
-                <input type="passsword" class="form-control" name="password" placeholder="Enter Password">
+                <input type="passsword" class="form-control" name="password" placeholder="Password">
             </div>
 
             <div class="form-btn">
@@ -30,6 +31,7 @@ if (!isset($_SESSION["user"])) {
             </div>
 
             <div>
+                <br>
                 <p>Not Registered Yet? <a href="register.php">Register Now</a></p>
             </div>
 

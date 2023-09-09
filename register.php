@@ -4,6 +4,7 @@ if (!isset($_SESSION["user"])) {
    header("Location: index.php");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,40 @@ if (!isset($_SESSION["user"])) {
     <link rel= "stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+<h2>Kroll Villa Reservations</h2>
+
     <div class="container">
         <form action="register.php" method="post">
 
+
+            
+
+
+            <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Full Name">
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Email Address">
+            </div>
+
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+
+            <div class="form-group">
+                <input type="password" name="repeat_password" class="form-control" placeholder="Repeat Password">
+            </div>
+
+            <div class="form-btn">
+                <input type="submit" value="Register Now" name="submit" class="btn btn-primary">
+            </div>
+            <br>
+            <div>
+                <p>Already Registered?<a href="login.php"> Log Now</a></p>
+            </div>
+
+           
 
             <?php
                 if(isset($_POST["submit"])){
@@ -77,34 +109,7 @@ if (!isset($_SESSION["user"])) {
 
             ?>
 
-
-
-            <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Full Name">
-            </div>
-
-            <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email Address">
-            </div>
-
-            <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Password">
-            </div>
-
-            <div class="form-group">
-                <input type="password" name="repeat_password" class="form-control" placeholder="Repeat Password">
-            </div>
-
-            <div class="form-btn">
-                <input type="submit" value="Register Now!" name="submit" class="btn btn-primary">
-            </div>
-            
-            <div>
-                <p>Already Registered ?<a href="login.php">Login</a></p>
-            </div>
-
         </form>
-    </div>
-    
+    </div> 
 </body>
 </html>
